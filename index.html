@@ -7,11 +7,41 @@
     </head>
     <link rel="stylesheet" href="css/style.css">
     <body>
+        <div class="container">
         <header>
             <h1>COCOA</h1>
         </header>
         <section>
+            <div class="information">
             <h1>イヤホンジャックの向こう側</h1>
+            <span class="type">Album</span>
+            </div>
+            <!-- span範囲を示す -->
+        <div class="description">
+            <img src="img/jacket.png" alt="イヤホンジャックの向こう側のジャケット写真">
+            <!-- width heigtで大きさ指定もできるが、css側ですることも多い -->
+            <!-- altタグは、エラーで画像が出なかったり音声ツールを使ったときに出る文字 -->
+            <!-- psgは容量大きくwebでは使えない、jpg最適、pngjpgより大きいがイラストとかは向いてるサイズ大きいけどね、svgpingより高画質 -->
+
+            <p>COCOA４枚目のアルバムとなる今作。ジャケットデザインに色鉛筆画家の「カタヒラシュンシ」氏を迎え、音楽と絵のコラボを実現させた一枚。</p>
+            <p> HONDA CARS静岡CMタイアップの「キミのうた」をはじめ、完全書き下ろしの新曲３曲を含む全６曲を収録。</p>
+            <p>イヤホンジャックの向こう側に広がる世界を、ぜひご堪能ください。</p>
+        </div>
+        <div class="songs">
+            <h2>収録曲</h2>
+            <ol>
+                <!-- olは、startタグやtypeを使うとスタートの番号を変えたりabcで割り振ったりできる -->
+                <li><a href="https://www.youtube.com/watch?v=vjqTkOISzeY" target="_blank"> C#</a> </li>
+                <!-- target _blankは別タブで開く -->
+                <li> ワンルームファッションショー</li>
+                <li> ハッピータイム</li>
+                <li> シャンディガフ</li>
+                <li> 僕は知らない</li>
+                <li> キミのうた</li>
+            </ol>
+
+        </div>
         </section>
+    </div>        
     </body>
 </html>
