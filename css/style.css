@@ -1,4 +1,6 @@
 @import url(sanitize.css);
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+/* webfont　Google上でコードが書いてなかったので、うまくいかなかった */
 
 body{
     background-color: #f0f0f0;
@@ -19,10 +21,12 @@ header h1{
     font-size: 24px;
     font-weight: normal;
     text-align: center;
+    font-family: "Arial";
 }
 
 div.container{
-    width: 800px;
+    max-width: 800px;
+    /* 最大の幅が、になる　それ以下の場合は画面の幅に合わせてね */
     margin: 0 auto;
     box-shadow: 0 0 10px rgba(0,0,0,.3);
 }
@@ -32,6 +36,11 @@ div.container{
     /* 画像を浮かせるというイメージ まさに回り込ませる*/
     margin: 0 10px 10px 0;
     /* 時計回りに余白をとる */
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    /* アニメーションふわっと */
 }
 
 .type{
@@ -62,3 +71,70 @@ a{
     text-decoration: none;　
     /* 下線を消す */
 }
+
+.songs h2{
+    font-size: 1em;
+    font-weight: normal;
+    margin: 0;
+    background-color: #e6e4dd;
+    padding: 5px 10px
+}
+
+.songs ol{
+    padding: 0;
+    margin: 0;
+    list-style-position: inside;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+/* 表形式を作る */
+
+.songs li{
+    border-bottom: 1px solid #ccc;
+    padding: 5px 10px;
+}
+
+section{
+    padding: 20px;
+    background-color: #fff;
+}
+
+footer{
+    text-align: center;
+    font-size: .8em;
+    padding: 5px;
+}
+
+.description img:hover{
+    opacity: .5;
+    /* カーソルを合わせた時に半透明にする */
+    /* hover　疑似クラス　重なったとき */
+}
+
+
+@media screen and (max-width:600px){
+    .description img{
+        float: none;
+        margin: 10px auto;
+        display: block;
+    }
+
+    header{
+        padding: 5px;
+    }
+
+    header h1{
+        font-size: 12px;
+    }
+    
+    .information h1{
+        font-size: 14px;
+    }
+
+    .songs ol{
+        display: block;
+        /* gridを解除 */
+    }
+}
+/* メディアクエリ　デバイスによって条件分岐 */
+/* cssは後に書いたものが優先される */
